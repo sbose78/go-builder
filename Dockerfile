@@ -3,7 +3,7 @@ FROM centos:7
 RUN yum install -y zip wget make hg svn bzr gcc docker https://centos7.iuscommunity.org/ius-release.rpm && yum install -y git2u && \
   yum clean all
 
-ENV GOLANG_VERSION 1.8.1
+ENV GOLANG_VERSION 1.8.3
 RUN wget https://golang.org/dl/go$GOLANG_VERSION.linux-amd64.tar.gz && \
   tar -C /usr/local -xzf go$GOLANG_VERSION.linux-amd64.tar.gz && \
   rm go${GOLANG_VERSION}.linux-amd64.tar.gz
